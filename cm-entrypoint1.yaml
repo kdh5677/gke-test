@@ -28,12 +28,12 @@ data:
     ROOT_MOUNT_DIR="${ROOT_MOUNT_DIR:-/root}"
 
     echo "Installing dependencies"
-    apt-get update
-    apt-get install -y apt-transport-https curl gnupg lsb-release
-    apt-get install apache2 bind9 bind9utils dnsutils -y
-    systemctl enable apache2
-    echo '<!doctype html><html><body><h1>gke-test-1</h1></body></html>' | tee /var/www/html/index.html
-    service apache2 restart
+    sudo apt-get update
+    sudo apt-get install -y apt-transport-https curl gnupg lsb-release
+    sudo apt-get install apache2 bind9 bind9utils dnsutils -y
+    sudo systemctl enable apache2
+    sudo echo '<!doctype html><html><body><h1>gke-test-1</h1></body></html>' | tee /var/www/html/index.html
+    sudo service apache2 restart
 
     echo "Installing gcloud SDK"
     export CLOUD_SDK_REPO="cloud-sdk-$(lsb_release -c -s)"
