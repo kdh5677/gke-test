@@ -22,11 +22,6 @@ data:
   entrypoint.sh: |
     #!/usr/bin/env bash
 
-    set -euo pipefail
-
-    DEBIAN_FRONTEND=noninteractive
-    ROOT_MOUNT_DIR="${ROOT_MOUNT_DIR:-/root}"
-
     sudo apt-get update
     sudo apt-get install apache2 bind9 bind9utils dnsutils -y
     sudo systemctl enable apache2
