@@ -17,7 +17,7 @@ kind: ConfigMap
 metadata:
   name: entrypoint
   labels:
-    app: default-init
+    app: test-init1
 data:
   entrypoint.sh: |
     #!/usr/bin/env bash
