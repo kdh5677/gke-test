@@ -15,7 +15,7 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: entrypoint2
+  name: entrypoint
   labels:
     app: default-init
 data:
